@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "outputDirectory": ".next",
+  "env": {
+    "TELEGRAM_BOT_TOKEN": "@telegram_bot_token",
+    "NEXT_PUBLIC_APP_URL": "@next_public_app_url"
+  }
+}

@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --binance-yellow: #F0B90B;
+  --binance-dark: #0B0E11;
+  --binance-card: #1E2329;
+  --binance-border: #2B3139;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--binance-dark);
+}
+
+.glass-card {
+  background: rgba(30, 35, 41, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(43, 49, 57, 0.8);
+}
+
+.price-up {
+  color: #0ECB81;
+}
+
+.price-down {
+  color: #F6465D;
+}
+
+.yellow-glow {
+  box-shadow: 0 0 20px rgba(240, 185, 11, 0.15);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--binance-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--binance-border);
+  border-radius: 4px;
+}
+
+/* Animations */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  animation: ticker 30s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
