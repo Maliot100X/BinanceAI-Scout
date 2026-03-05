@@ -65,7 +65,7 @@ async function pollUpdates() {
                         
                         console.log(`[MSG] ${firstName}: ${text}`);
                         
-                        if (cmd === '/start') {
+                        if (cmd === '/start' || cmd === '/hello') {
                             await sendMessage(chatId, `🤖 *Welcome, ${firstName}!* I am your BinanceAI Scout.\n\n💰 /prices — Live Prices\n🧠 /brief — AI Brief\n🔥 /movers — Top Movers\n🟡 /bnb — BNB Report\n📊 /dominance — BTC dominance\n😱 /fear — Sentiment\n📚 /learn — Crypto Tips\n🔔 /alert BTC 71000 — Set Alert\n📊 /dca BTC 1000 weekly — DCA Calc\n📁 /portfolio BTC:0.5 — Value\n❓ /help — All Commands`);
                         } else if (cmd === '/help') {
                             await sendMessage(chatId, `❓ *BinanceAI Scout Commands*\n\n/prices — Live prices\n/movers — Top gainers/losers\n/bnb — BNB Chain report\n/fear — Fear & Greed\n/dominance — BTC Dominance\n/brief — Full market analysis\n/learn — Random education tip\n/alert [COIN] [PRICE] — Set alert\n/dca [COIN] [AMT] [FREQ] — DCA plan\n/portfolio [COIN:AMT,...] — Calc value`);
